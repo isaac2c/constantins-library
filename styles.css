@@ -15,14 +15,11 @@ h1 {
 
 .login-symbol {
     height: 2em;
+    vertical-align: middle;
 }
 
 label {
     display: block;
-}
-
-.login-input {
-    vertical-align: middle;
 }
 
 .doc-icon {
