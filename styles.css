@@ -13,9 +13,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1 {
-    /* Top margin of h1 element set to 0 to prevent margin collapsing that would otherwise enlarge body element. */
-    margin-top: 0;
+header {
+    /* Top padding of header element set to prevent margin collapsing that would otherwise enlarge body element. */
+    padding-top: 1px;
 }
 
 #login-form {
@@ -42,4 +42,12 @@ inputs {
 
 .doc-icon {
     width: 16%;
+}
+
+.directory {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
 }
