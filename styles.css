@@ -80,12 +80,16 @@ figure {
     justify-content: left;
 }
 
-a:any-link, a:active {
+a:any-link {
     color: rgb(225, 225, 210);
 }
 
 a:hover {
     color: rgb(255, 157, 0)
+}
+
+a:active {
+    color: rgb(225, 225, 210);
 }
 
 /* FOOTER */
