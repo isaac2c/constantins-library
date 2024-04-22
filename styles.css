@@ -12,3 +12,7 @@ h1 {
     /* Top margin of h1 element set to 0 to prevent margin collapsing that would otherwise enlarge body element. */
     margin-top: 0;
 }
+
+.class-symbol {
+    height: 1em;
+}
