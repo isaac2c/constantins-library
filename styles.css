@@ -13,6 +13,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* HEADER */
+
 header {
     /* Top padding of header element set to prevent margin collapsing that would otherwise enlarge body element. */
     padding-top: 1px;
@@ -43,8 +45,10 @@ label {
     color: rgb(30, 30, 30);
 }
 
+/* MAIN */
+
 .doc-icon {
-    height: 10em;
+    height: 8em;
 }
 
 .directory {
@@ -53,4 +57,14 @@ label {
     flex-wrap: wrap;
     align-items: center;
     justify-content: left;
+}
+
+/* FOOTER */
+
+footer {
+    /* Top padding of header element set to prevent margin collapsing that would otherwise enlarge body element. */
+    padding-bottom: 2em;
+    background-color: rgb(30, 30, 30);
+    color: rgb(225, 225, 225);
+    border-top: 1px solid rgb(255, 157, 0);
 }
