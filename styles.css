@@ -16,3 +16,11 @@ h1 {
 .login-symbol {
     height: 2em;
 }
+
+label {
+    display: block;
+}
+
+.login-input {
+    /* Placeholder: use to vertically center login inputs elements.*/
+}
