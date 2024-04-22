@@ -26,6 +26,11 @@ label {
     display: inline-block;
 }
 
+inputs {
+    background-color: rgb(225, 225, 225);
+    color: rgb(30, 30, 30);
+}
+
 .doc-icon {
     width: 16%;
 }
