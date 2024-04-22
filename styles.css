@@ -48,12 +48,12 @@ label {
 /* MAIN */
 
 figure {
-    width: 10em;
+    width: 9em;
     text-align: center;
 }
 
 .doc-icon {
-    height: 8em;
+    max-height: 8em;
     margin: auto;
 }
 
