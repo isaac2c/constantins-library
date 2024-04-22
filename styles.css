@@ -47,7 +47,9 @@ label {
 
 /* MAIN */
 
-main {padding 0 1em}
+main {
+    padding: 0 1em;
+}
 
 figure {
     width: 7em;
