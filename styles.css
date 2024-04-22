@@ -72,6 +72,10 @@ main {
     overflow: auto;
 }
 
+.inline-icon {
+    height: 1em;
+}
+
 figure {
     width: 15em;
     max-width: 360px;
