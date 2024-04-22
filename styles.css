@@ -63,7 +63,7 @@ main {
 }
 
 figure {
-    width: 7em;
+    width: 10em;
     text-align: center;
 }
 
@@ -78,6 +78,14 @@ figure {
     flex-wrap: wrap;
     align-items: center;
     justify-content: left;
+}
+
+a:any-link {
+    color: rgb(225, 225, 210);
+}
+
+a:hover {
+    color: rgb(255, 157, 0)
 }
 
 /* FOOTER */
