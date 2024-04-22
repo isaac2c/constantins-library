@@ -17,7 +17,7 @@ body {
 
 header {
     /* Top padding of header element set to prevent margin collapsing that would otherwise enlarge body element. */
-    padding-top: 1px;
+    padding: 1px 1em 0;
     background-color: rgb(30, 30, 30);
     color: rgb(225, 225, 225);
     border-bottom: 1px solid rgb(255, 157, 0);
@@ -47,6 +47,8 @@ label {
 
 /* MAIN */
 
+main {padding 0 1em}
+
 figure {
     width: 7em;
     text-align: center;
@@ -69,8 +71,9 @@ figure {
 
 footer {
     /* Top padding of header element set to prevent margin collapsing that would otherwise enlarge body element. */
-    padding-bottom: 1em;
+    padding: 0 1em 1em;
     background-color: rgb(30, 30, 30);
     color: rgb(225, 225, 225);
     border-top: 1px solid rgb(255, 157, 0);
+    text-align: center;
 }
