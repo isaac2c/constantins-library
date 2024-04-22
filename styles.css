@@ -20,10 +20,10 @@ h1 {
 label {
     display: block;
 }
-/*
+
 .login-input {
-    Placeholder: use to vertically center login inputs elements.
-}*/
+    vertical-align: middle;
+}
 
 .doc-icon {
     width: 16%;
