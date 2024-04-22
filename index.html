@@ -7,85 +7,87 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header>
-            <div id="heading-box">
-                <h1>Constantin's Library</h1>
-                <h2>Personal File Manager</h2>
-            </div>
-            <!-- Add an action attribute or similar to the form to call a Javascript function. -->
-            <form id="login-form">
-                <fieldset>
-                    <legend>Login</legend>
-                    <div id="login-inputs">
-                        <label for="username">
-                            <img class="login-symbol" src="/uploaded-resources/username-symbol-transparent.png" alt="Enter username">
-                            <input id="username" type="email" name="user" required>
-                        </label>
-                        <label for="password">
-                            <img class="login-symbol" src="/uploaded-resources/password-symbol-transparent.png" alt="Enter password">
-                            <input id="password" type="password" name="password" required>
-                        </label>
-                    </div>
-                    <input class="login-symbol" type="image" src="/uploaded-resources/submit-symbol-transparent.png" alt="Login">
-                </fieldset>
-            </form>
-        </header>
-        <main>
-            <!-- <p>What fragments will you find?</p> -->
-            <p><a href="#">root/</a></p>
-            <h3>Folders:</h3>
-            <div class="directory">
-                <!-- Below link to call Javascript function. -->
-                <a href="#">
-                    <figure>
-                        <img class="doc-icon" src="/uploaded-resources/folder-transparent.png">
-                        <figcaption>..</figcaption>
-                    </figure>
-                </a>
-                <!-- Below link to call Javascript function. -->
-                <a href="#">
-                    <figure>
-                        <img class="doc-icon" src="/uploaded-resources/folder-transparent.png">
-                        <figcaption>example-folder</figcaption>
-                    </figure>
-                </a>
-            </div>
-            <h3>Documents:</h3>
-            <div class="directory">
-                <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
-                    <figure>
-                        <img class="doc-icon" src="/uploaded-resources/audio-transparent.png">
-                        <figcaption>example-audio-file.mp3</figcaption>
-                    </figure>
-                </a>
-                <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
-                    <figure>
-                        <img class="doc-icon" src="/uploaded-resources/pdf-transparent.png">
-                        <figcaption>example-pdf.pdf</figcaption>
-                    </figure>
-                </a>
-                <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
-                    <figure>
-                        <img class="doc-icon" src="/uploaded-resources/document-transparent.png">
-                        <figcaption>example-text-document.txt</figcaption>
-                    </figure>
-                </a>
-                <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
-                    <figure>
-                        <img class="doc-icon" src="/uploaded-resources/spreadsheet-transparent.png">
-                        <figcaption>example-spreadsheet.csv</figcaption>
-                    </figure>
-                </a>
-                <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
-                    <figure>
-                        <img class="doc-icon" src="/uploaded-resources/image-transparent.png">
-                        <figcaption>example-image.png</figcaption>
-                    </figure>
-                </a>
-            </div>
-        </main>
-        <footer>
-            <p>Constantin's Library 2024</p>
-        </footer>
+        <div id="primary-container">
+            <header>
+                <div id="heading-box">
+                    <h1>Constantin's Library</h1>
+                    <h2>Personal File Manager</h2>
+                </div>
+                <!-- Add an action attribute or similar to the form to call a Javascript function. -->
+                <form id="login-form">
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div id="login-inputs">
+                            <label for="username">
+                                <img class="login-symbol" src="/uploaded-resources/username-symbol-transparent.png" alt="Enter username">
+                                <input id="username" type="email" name="user" required>
+                            </label>
+                            <label for="password">
+                                <img class="login-symbol" src="/uploaded-resources/password-symbol-transparent.png" alt="Enter password">
+                                <input id="password" type="password" name="password" required>
+                            </label>
+                        </div>
+                        <input class="login-symbol" type="image" src="/uploaded-resources/submit-symbol-transparent.png" alt="Login">
+                    </fieldset>
+                </form>
+            </header>
+            <main>
+                <!-- <p>What fragments will you find?</p> -->
+                <p><a href="#">root/</a></p>
+                <h3>Folders:</h3>
+                <div class="directory">
+                    <!-- Below link to call Javascript function. -->
+                    <a href="#">
+                        <figure>
+                            <img class="doc-icon" src="/uploaded-resources/folder-transparent.png">
+                            <figcaption>..</figcaption>
+                        </figure>
+                    </a>
+                    <!-- Below link to call Javascript function. -->
+                    <a href="#">
+                        <figure>
+                            <img class="doc-icon" src="/uploaded-resources/folder-transparent.png">
+                            <figcaption>example-folder</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <h3>Documents:</h3>
+                <div class="directory">
+                    <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
+                        <figure>
+                            <img class="doc-icon" src="/uploaded-resources/audio-transparent.png">
+                            <figcaption>example-audio-file.mp3</figcaption>
+                        </figure>
+                    </a>
+                    <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
+                        <figure>
+                            <img class="doc-icon" src="/uploaded-resources/pdf-transparent.png">
+                            <figcaption>example-pdf.pdf</figcaption>
+                        </figure>
+                    </a>
+                    <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
+                        <figure>
+                            <img class="doc-icon" src="/uploaded-resources/document-transparent.png">
+                            <figcaption>example-text-document.txt</figcaption>
+                        </figure>
+                    </a>
+                    <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
+                        <figure>
+                            <img class="doc-icon" src="/uploaded-resources/spreadsheet-transparent.png">
+                            <figcaption>example-spreadsheet.csv</figcaption>
+                        </figure>
+                    </a>
+                    <a href="/uploaded-resources/downloadable-files/test-file.txt" download="test-file">
+                        <figure>
+                            <img class="doc-icon" src="/uploaded-resources/image-transparent.png">
+                            <figcaption>example-image.png</figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </main>
+            <footer>
+                <p>Constantin's Library 2024</p>
+            </footer>
+        </div>
     </body>
 </html>
