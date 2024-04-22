@@ -80,7 +80,7 @@ figure {
     justify-content: left;
 }
 
-a:any-link {
+a:any-link, a:active {
     color: rgb(225, 225, 210);
 }
 
