@@ -64,7 +64,7 @@ label {
 #login-inputs input {
     background-color: rgb(225, 225, 225);
     color: rgb(30, 30, 30);
-    margin: 0.5em;
+    margin-top: 0.5em;
 }
 
 /* MAIN */
