@@ -75,7 +75,8 @@ main {
 }
 
 .inline-icon {
-    height: 1em;
+    height: 2em;
+    vertical-align: middle;
 }
 
 figure {
