@@ -74,6 +74,7 @@ main {
 
 figure {
     width: 15em;
+    max-width: 360px;
     text-align: center;
 }
 
