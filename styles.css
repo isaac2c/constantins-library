@@ -101,14 +101,21 @@ figure {
 
 a:any-link {
     color: rgb(225, 225, 210);
+    text-decoration-line: none;
+}
+
+p a {
+    text-decoration-line: underline;
 }
 
 a:hover {
-    color: rgb(255, 157, 0)
+    color: rgb(255, 157, 0);
+    text-decoration-line: underline;
 }
 
 a:active {
     color: rgb(225, 225, 210);
+    text-decoration-line: underline;
 }
 
 /* FOOTER */
