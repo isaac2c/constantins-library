@@ -11,6 +11,11 @@ body {
     background-color: rgb(30, 30, 45);
     color: rgb(225, 225, 210);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* HEADER */
@@ -26,6 +31,7 @@ header {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    flex: 0 0 auto;
 
 }
 
@@ -55,6 +61,7 @@ label {
 
 main {
     padding: 0 1em;
+    flex: auto;
 }
 
 figure {
@@ -84,6 +91,7 @@ footer {
     color: rgb(225, 225, 225);
     border-top: 1px solid rgb(255, 157, 0);
     text-align: center;
+    flex:0 0 auto;
 }
 
 p:last-of-type {
