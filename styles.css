@@ -104,7 +104,7 @@ a:any-link {
     text-decoration-line: none;
 }
 
-p a {
+p a:any-link {
     text-decoration-line: underline;
 }
 
