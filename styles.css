@@ -24,3 +24,7 @@ label {
 .login-input {
     Placeholder: use to vertically center login inputs elements.
 }*/
+
+.doc-icon {
+    width: 16.67%;
+}
