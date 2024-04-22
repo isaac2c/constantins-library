@@ -124,7 +124,7 @@ footer {
     width: 100%;
     padding: 0 1em 1em;
     margin-bottom: 0;
-    background: linear-gradient(180deg, rgb(20, 20, 30), rgb(30, 30, 30), 20%,  rgb(30, 30, 30), 40%, rgb(60, 60, 60), 50%, rgb(30, 30, 30), 60%, rgb(30, 30, 30) 80%, rgb(20, 20, 30));
+    background: linear-gradient(180deg, rgb(20, 20, 30), rgb(30, 30, 30), 20%,  rgb(30, 30, 30), 40%, rgb(45, 45, 45), 60%, rgb(30, 30, 30) 80%, rgb(20, 20, 30));
     color: rgb(225, 225, 225);
     border-top: 1px solid rgb(255, 157, 0);
     text-align: center;
