@@ -22,6 +22,10 @@ label {
     display: block;
 }
 
+#login-inputs {
+    display: inline-block;
+}
+
 .doc-icon {
     width: 16%;
 }

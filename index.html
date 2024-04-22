@@ -14,14 +14,16 @@
             <!-- Add an action attribute or similar to the form to call a Javascript function. -->
             <form>
                 <fieldset>
-                    <label for="username">
-                        <img class="login-symbol" src="/uploaded-resources/username-symbol-transparent.png" alt="Enter username">
-                        <input id="username" type="email" name="user" required>
-                    </label>
-                    <label for="password">
-                        <img class="login-symbol" src="/uploaded-resources/password-symbol-transparent.png" alt="Enter password">
-                        <input id="password" type="password" name="password" required>
-                    </label>
+                    <div id="login-inputs">
+                        <label for="username">
+                            <img class="login-symbol" src="/uploaded-resources/username-symbol-transparent.png" alt="Enter username">
+                            <input id="username" type="email" name="user" required>
+                        </label>
+                        <label for="password">
+                            <img class="login-symbol" src="/uploaded-resources/password-symbol-transparent.png" alt="Enter password">
+                            <input id="password" type="password" name="password" required>
+                        </label>
+                    </div>
                     <input type="submit" value="Login">
                 </fieldset>
             </form>
