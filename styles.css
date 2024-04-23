@@ -65,7 +65,7 @@ label {
     width: 15em;
     height: 1.5em;
     margin-left: 0.5em;
-    background-color: rgb(225, 225, 225);
+    background: linear-gradient(180deg, rgb(245, 245, 245), rgb(205, 205, 205));
     color: rgb(30, 30, 30);
     margin-top: 0.5em;
 }
