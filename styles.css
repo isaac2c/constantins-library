@@ -48,10 +48,6 @@ header {
     display: inline-block;
 }
 
-#login-form fieldset {
-    border: 2px solid rgb(225, 225, 225);
-}
-
 .login-symbol {
     height: 2em;
     vertical-align: middle;
