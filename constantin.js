@@ -35,16 +35,17 @@ function newFile(fileName, fileType, fileLink) {
 function clearDirectories() {
     const clearedDirectories = [document.querySelector("#file-directory"), document.querySelector("#folder-directory")]
     for (const clearedDirectory of clearedDirectories) {
-        while (clearedDirectory.hasChildNodes()) {
+        /*while (clearedDirectory.hasChildNodes()) {
             clearedDirectory.removeChild()
-        }
+        }*/
+        console.log(clearedDirectory.hasChildNodes)
     }
 }
 
 // Test file creation
 
 testButton = document.createElement("button");
-testButton.innerText = "Test - Create New File";
+testButton.innerText = "Test";
 testFooter = document.querySelector("footer");
 testFooter.append(testButton);
 testButton.onclick = clearDirectories;
