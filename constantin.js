@@ -35,10 +35,9 @@ function newFile(fileName, fileType, fileLink) {
 function clearDirectories() {
     const clearedDirectories = [document.querySelector("#file-directory"), document.querySelector("#folder-directory")]
     for (const clearedDirectory of clearedDirectories) {
-        /*while (clearedDirectory.hasChildNodes()) {
-            clearedDirectory.removeChild()
-        }*/
-        console.log(clearedDirectory.hasChildNodes())
+        while (clearedDirectory.hasChildNodes()) {
+            clearedDirectory.removeChild(clearedDirectory.firstChild)
+        }
     }
 }
 
