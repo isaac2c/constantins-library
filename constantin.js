@@ -2,6 +2,9 @@
 
 //Remember to escape forward slashes when passing fileLink as an argument.
 
+// NEW FILE
+// This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
+
 function newFile(fileName, fileType, fileLink) {
     const fileTypes = [
         {source: "\/uploaded-resources\/audio-transparent.png", alternative: "Audio file icon."},
@@ -26,14 +29,22 @@ function newFile(fileName, fileType, fileLink) {
     fileDirectory.append(newLink);
 }
 
-// Test file creation
+// CLEAR DIRECTORIES
+// This function empties the file and folder directories, as displayed on the Constantin's Library File Manager.
 
+function clearDirectories() {
+    const clearedDirectories = [document.querySelector("#file-directory"), document.querySelector("#folder-directory")]
+    for (const clearedDirectory of clearedDirectories) {
+        while (clearedDirectory.hasChildNodes()) {
+            clearedDirectory.removeChild()
+        }
+    }
+}
+
+// Test file creation
 
 testButton = document.createElement("button");
 testButton.innerText = "Test - Create New File";
 testFooter = document.querySelector("footer");
 testFooter.append(testButton);
-function testFile() {
-    newFile("new-test-file.pdf", 1, "\/uploaded-resources\/downloadable-files\/example-pdf.pdf");
-}
-testButton.onclick = testFile;
+testButton.onclick = clearDirectories;
