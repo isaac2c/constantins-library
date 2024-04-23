@@ -28,12 +28,11 @@ function newFile(fileName, fileType, fileLink) {
 
 // Test file creation
 
-
 testButton = document.createElement("button");
 testButton.innerText = "Test - Create New File";
 testFooter = document.querySelector("footer");
 testFooter.append(testButton);
-function testFile() {
+/*function testFile() {
     newFile("new-test-file.pdf", 1, "\/uploaded-resources\/downloadable-files\/example-pdf.pdf");
-}
+}*/
 testButton.onclick = testFile();
