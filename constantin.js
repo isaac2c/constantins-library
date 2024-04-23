@@ -2,6 +2,12 @@
 
 //Remember to escape forward slashes when passing fileLink as an argument.
 
+let fileDirectory;
+let newLink;
+let newImage;
+let newFigure;
+let newCaption;
+
 function newFile(fileName, fileType, fileLink) {
     const fileTypes = [
         {source: "\/uploaded-resources\/audio-transparent.png", alternative: "Audio file icon."},
@@ -10,16 +16,16 @@ function newFile(fileName, fileType, fileLink) {
         {source: "\/uploaded-resources\/spreadsheet-transparent.png", alternative: "Spreadsheet icon."},
         {source: "\/uploaded-resources\/image-transparent.png", alternative: "Image file icon."}
     ];
-    const fileDirectory = document.querySelector("#file-directory");
-    const newLink = document.createElement("a");
+    fileDirectory = document.querySelector("#file-directory");
+    newLink = document.createElement("a");
     newLink.setAttribute("href", fileLink);
     newLink.setAttribute("download", fileName);
-    const newFigure = document.createElement("figure");
-    const newImage = document.createElement("img");
+    newFigure = document.createElement("figure");
+    newImage = document.createElement("img");
     newImage.className += " doc-icon";
     newImage.setAttribute("src", fileTypes[fileType].source);
     newImage.setAttribute("alt", fileTypes[fileType].alternative);
-    const newCaption = document.createElement("figcaption");
+    newCaption = document.createElement("figcaption");
     newCaption.innerText = fileName;
     newFigure.append(newImage, newCaption);
     newLink.append(newFigure);
