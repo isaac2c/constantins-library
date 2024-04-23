@@ -28,5 +28,8 @@ function newFile(fileName, fileType, fileLink) {
 
 // Test file creation
 
+function testFile() {
+    newFile("new-test-file.pdf", 1, "\/uploaded-resources\/downloadable-files\/example-pdf.pdf");
+}
 const testCreate = document.querySelector("#login-form");
-testCreate.setAttribute("onsubmit", "newFile(\"new-test-file.pdf\", 1, \"\/uploaded-resources\/downloadable-files\/example-pdf.pdf\")")
+testCreate.setAttribute("onsubmit", "testFile()");
