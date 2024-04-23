@@ -38,7 +38,7 @@ function clearDirectories() {
         /*while (clearedDirectory.hasChildNodes()) {
             clearedDirectory.removeChild()
         }*/
-        console.log(clearedDirectory.hasChildNodes)
+        console.log(clearedDirectory.hasChildNodes())
     }
 }
 
