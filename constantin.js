@@ -17,7 +17,8 @@ const folderRoot = [
         "test-folder-1",
         "test-folder-2",
         "test-folder-3",
-        "test-folder-4"
+        "test-folder-4",
+
     ],
     [
         {"name": "test-audio", "type": 0, "path": "example-audio-file.mp3"},
@@ -62,7 +63,8 @@ function newFolder(folderName) {
     const folderDirectory = document.querySelector("#folder-directory");
     const folderLink = document.createElement("a");
     folderLink.setAttribute("href", "#");
-    folderLink.onclick = updateCurrentDirectory(folderName);
+    const folderLinkTarget = updateCurrentDirectory(folderName);
+    folderLink.onclick =  folderLinkTarget;
     const folderFigure = document.createElement("figure");
     const folderImage = document.createElement("img");
     folderImage.className += " doc-icon";
