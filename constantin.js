@@ -87,5 +87,5 @@ testButton = document.createElement("button");
 testButton.innerText = "Test";
 testFooter = document.querySelector("footer");
 testFooter.append(testButton);
-newFolder(testing-folder)
+newFolder("testing-folder")
 testButton.onclick = console.log(currentDirectory);
