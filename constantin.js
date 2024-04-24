@@ -28,6 +28,11 @@ const folderExampleRoot = [
         {name: "example-image.png", type: 4},
     ]
 ];
+const folderExampleFolder1 = [];
+const folderExampleFolder2 = [];
+const folderExampleFolder3 = [];
+const folderExampleFolder4 = [];
+
 //*/
 
 // NEW FILE
