@@ -5,36 +5,30 @@ let currentDirectory = ""
 
 // Remember to escape forward slashes when passing fileLink as an argument.
 
-// DATA STRUCTURE - DIRECTORIES
-// This data structure contains reference information about each directory.
+///*
+// DATA STRUCTURE - EXAMPLE
+// This data structure contains information about the contents of an example directory.
 
-// DATA STRUCTURE - ROOT
-// This data structure contains information about the contents of the root directory.
-
-const folderRoot = [
-    {name: "root", path: "\/uploaded-resources\/downloadable-files\/"},
+const folderExampleRoot = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "example-root", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
-        "test-folder-1",
-        "test-folder-2",
-        "test-folder-3",
-        "test-folder-4",
-
+        // Folder directory contents:
+        {ref: folderExampleFolder1, name: "example-folder-1"},
+        {ref: folderExampleFolder2, name: "example-folder-2"},
+        {ref: folderExampleFolder3, name: "example-folder-3"},
+        {ref: folderExampleFolder4, name: "example-folder-4"},
     ],
     [
-        {name: "test-audio", "type": 0, "path": "example-audio-file.mp3"},
-        {name: "test-pdf", "type": 1, "path": "example-pdf.pdf"},
-        {name: "test-text.txt", "type": 2, "path": "example-text-document.txt"},
-        {name: "test-spreadsheet.csv", "type": 3, "path": "example-spreadsheet.csv"},
-        {name: "test-image.png", "type": 4, "path": "example-image.png"},
+        //File directory contents:
+        {name: "example-audio.mp3", type: 0, path: "example-audio-file.mp3"},
+        {name: "example-pdf.pdf", type: 1, path: "example-pdf.pdf"},
+        {name: "example-text-document.txt", type: 2, path: "example-text-document.txt"},
+        {name: "example-spreadsheet.csv", type: 3, path: "example-spreadsheet.csv"},
+        {name: "example-image.png", type: 4, path: "example-image.png"},
     ]
 ];
-
-// UPDATE CURRENT DIRECTORY
-// This function is used elsewhere to update the target folder when the user interacts with various elements of the webpage. 
-
-function updateCurrentDirectory(clickedFolder) {
-    currentDirectory = (clickedFolder)
-}
+//*/
 
 // NEW FILE
 // This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
@@ -97,15 +91,16 @@ function clearDirectories() {
     }
 }
 
-
-
 // CHANGE DIRECTORY
 // This function combines the above functions to change what the user sees when they select a new folder.
 
 function changeDirectory(targetFolder) {
     clearDirectories();
-    for (const iFolders of targetFolder) {
-
+    for (const iFolder of targetFolder[1]) {
+        newFolder(iFolder.ref)
+    }
+    for (const iFile of targetFolder[2]) {
+        newFile(iFile.name, iFile.type, iFile.path)
     }
 }
 
@@ -115,8 +110,8 @@ testButton = document.createElement("button");
 testButton.innerText = "Test";
 testFooter = document.querySelector("footer");
 testFooter.append(testButton);
-newFolder(folderRoot)
-function testTestFolder() {
+newFolder(folderExampleRoot)
+function testTest() {
     console.log(currentDirectory);
 }
-testButton.onclick = testTestFolder;
+testButton.onclick = testTest;
