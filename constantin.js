@@ -12,7 +12,7 @@ let currentDirectory = ""
 // This data structure contains information about the contents of the root directory.
 
 const folderRoot = [
-    [{name: "root", path: "\/uploaded-resources\/downloadable-files\/"}],
+    {name: "root", path: "\/uploaded-resources\/downloadable-files\/"},
     [
         "test-folder-1",
         "test-folder-2",
