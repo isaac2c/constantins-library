@@ -11,9 +11,6 @@ function updateCurrentDirectory(clickedFolder) {
 // DATA STRUCTURE - ROOT
 // This data structure contains information about the contents of the root directory.
 
-
-document.querySelector("#root-link").onclick = updateCurrentDirectory("root");
-
 // NEW FILE
 // This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
 
