@@ -2,6 +2,17 @@
 
 //Remember to escape forward slashes when passing fileLink as an argument.
 
+// DATA STRUCTURE - ROOT
+// This data structure contains information about the contents of the root directory.
+
+
+
+let currentDirectory = ""
+function updateCurrentDirectory(clickedFolder) {
+    currentDirectory = (clickedFolder)
+}
+
+
 // NEW FILE
 // This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
 
@@ -29,6 +40,27 @@ function newFile(fileName, fileType, fileLink) {
     fileDirectory.append(newLink);
 }
 
+// NEW FOLDER
+// This function makes a selected folder stored on the server visible within the Constantin's Library File Manager.
+
+function newFolder(folderName) {
+    const folderDirectory = document.querySelector("#folder-directory");
+    const folderLink = document.createElement("a");
+    folderLink.setAttribute("href", "#");
+    folderLink.onclick = updateCurrentDirectory(folderName);
+    /*folderLink.setAttribute("id", folderName + "-link")*/
+    const folderFigure = document.createElement("figure");
+    const folderImage = document.createElement("img");
+    folderImage.className += " doc-icon";
+    folderImage.setAttribute("src", "/uploaded-resources/folder-transparent.png");
+    folderImage.setAttribute("alt", "Folder icon.");
+    const folderCaption = document.createElement("figcaption");
+    folderCaption.innerText = folderName;
+    folderFigure.append(folderImage, folderCaption);
+    folderLink.append(folderFigure);
+    folderDirectory.append(folderLink);
+}
+
 // CLEAR DIRECTORIES
 // This function empties the file and folder directories, as displayed on the Constantin's Library File Manager.
 
@@ -41,10 +73,19 @@ function clearDirectories() {
     }
 }
 
+// CHANGE DIRECTORY
+// This function combines the above functions to change what the user sees when they select a new folder.
+
+function changeDirectory() {
+    clearDirectories();
+
+}
+
 // Test file creation
 
 testButton = document.createElement("button");
 testButton.innerText = "Test";
 testFooter = document.querySelector("footer");
 testFooter.append(testButton);
-testButton.onclick = clearDirectories;
+newFolder(testing-folder)
+testButton.onclick = console.log(currentDirectory);
