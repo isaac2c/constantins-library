@@ -12,7 +12,7 @@ let currentDirectory = ""
 // This data structure contains information about the contents of the root directory.
 
 const folderRoot = [
-    [{"name": "root", "path": "\/uploaded-resources\/downloadable-files\/"}],
+    [{name: "root", path: "\/uploaded-resources\/downloadable-files\/"}],
     [
         "test-folder-1",
         "test-folder-2",
@@ -21,11 +21,11 @@ const folderRoot = [
 
     ],
     [
-        {"name": "test-audio", "type": 0, "path": "example-audio-file.mp3"},
-        {"name": "test-pdf", "type": 1, "path": "example-pdf.pdf"},
-        {"name": "test-text.txt", "type": 2, "path": "example-text-document.txt"},
-        {"name": "test-spreadsheet.csv", "type": 3, "path": "example-spreadsheet.csv"},
-        {"name": "test-image.png", "type": 4, "path": "example-image.png"},
+        {name: "test-audio", "type": 0, "path": "example-audio-file.mp3"},
+        {name: "test-pdf", "type": 1, "path": "example-pdf.pdf"},
+        {name: "test-text.txt", "type": 2, "path": "example-text-document.txt"},
+        {name: "test-spreadsheet.csv", "type": 3, "path": "example-spreadsheet.csv"},
+        {name: "test-image.png", "type": 4, "path": "example-image.png"},
     ]
 ];
 
@@ -102,9 +102,9 @@ function clearDirectories() {
 // CHANGE DIRECTORY
 // This function combines the above functions to change what the user sees when they select a new folder.
 
-function changeDirectory() {
+function changeDirectory(targetFolder) {
     clearDirectories();
-    for (const iFolders of folderRef) {
+    for (const iFolders of targetFolder) {
 
     }
 }
