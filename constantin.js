@@ -21,11 +21,11 @@ const folderExampleRoot = [
     ],
     [
         //File directory contents:
-        {name: "example-audio.mp3", type: 0, path: "example-audio-file.mp3"},
-        {name: "example-pdf.pdf", type: 1, path: "example-pdf.pdf"},
-        {name: "example-text-document.txt", type: 2, path: "example-text-document.txt"},
-        {name: "example-spreadsheet.csv", type: 3, path: "example-spreadsheet.csv"},
-        {name: "example-image.png", type: 4, path: "example-image.png"},
+        {name: "example-audio.mp3", type: 0},
+        {name: "example-pdf.pdf", type: 1},
+        {name: "example-text-document.txt", type: 2},
+        {name: "example-spreadsheet.csv", type: 3},
+        {name: "example-image.png", type: 4},
     ]
 ];
 //*/
@@ -100,7 +100,8 @@ function changeDirectory(targetFolder) {
         newFolder(iFolder.ref)
     }
     for (const iFile of targetFolder[2]) {
-        newFile(iFile.name, iFile.type, iFile.path)
+        const newPath =  targetFolder[0].path + iFile.name;
+        newFile(iFile.name, iFile.type, newPath);
     }
 }
 
