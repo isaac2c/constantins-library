@@ -1,17 +1,18 @@
 // Files
 
-//Remember to escape forward slashes when passing fileLink as an argument.
-
-// DATA STRUCTURE - ROOT
-// This data structure contains information about the contents of the root directory.
-
-
-
 let currentDirectory = ""
 function updateCurrentDirectory(clickedFolder) {
     currentDirectory = (clickedFolder)
 }
 
+// Remember to escape forward slashes when passing fileLink as an argument.
+
+
+// DATA STRUCTURE - ROOT
+// This data structure contains information about the contents of the root directory.
+
+
+document.querySelector("#root-link").onclick = updateCurrentDirectory("root");
 
 // NEW FILE
 // This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
@@ -47,8 +48,8 @@ function newFolder(folderName) {
     const folderDirectory = document.querySelector("#folder-directory");
     const folderLink = document.createElement("a");
     folderLink.setAttribute("href", "#");
-    folderLink.onclick = updateCurrentDirectory(folderName);
-    /*folderLink.setAttribute("id", folderName + "-link")*/
+    folderLink.setAttribute("id", folderName + "-link")
+    document.querySelector("#" + folderName + "-link").onclick = consol.log(folderName); // FIX THIS!
     const folderFigure = document.createElement("figure");
     const folderImage = document.createElement("img");
     folderImage.className += " doc-icon";
