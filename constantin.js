@@ -1,18 +1,18 @@
 // Files
 
 let currentDirectory = ""
-function updateCurrentDirectory(clickedFolder) {
-    currentDirectory = (clickedFolder)
-}
+
 
 // Remember to escape forward slashes when passing fileLink as an argument.
 
+// DATA STRUCTURE - DIRECTORIES
+// This data structure contains reference information about each directory.
 
 // DATA STRUCTURE - ROOT
 // This data structure contains information about the contents of the root directory.
 
 const folderRoot = [
-    ["\/uploaded-resources\/downloadable-files\/"],
+    [{"name": "root", "path": "\/uploaded-resources\/downloadable-files\/"}],
     [
         "test-folder-1",
         "test-folder-2",
@@ -28,6 +28,13 @@ const folderRoot = [
         {"name": "test-image.png", "type": 4, "path": "example-image.png"},
     ]
 ];
+
+// UPDATE CURRENT DIRECTORY
+// This function is used elsewhere to update the target folder when the user interacts with various elements of the webpage. 
+
+function updateCurrentDirectory(clickedFolder) {
+    currentDirectory = (clickedFolder)
+}
 
 // NEW FILE
 // This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
@@ -59,12 +66,12 @@ function newFile(fileName, fileType, fileLink) {
 // NEW FOLDER
 // This function makes a selected folder stored on the server visible within the Constantin's Library File Manager.
 
-function newFolder(folderName) {
+function newFolder(folderRef) {
     const folderDirectory = document.querySelector("#folder-directory");
     const folderLink = document.createElement("a");
     folderLink.setAttribute("href", "#");
     folderLink.onclick =  function () {
-        updateCurrentDirectory(folderName);
+        changeDirectory(folderRef);
     };
     const folderFigure = document.createElement("figure");
     const folderImage = document.createElement("img");
@@ -72,7 +79,7 @@ function newFolder(folderName) {
     folderImage.setAttribute("src", "/uploaded-resources/folder-transparent.png");
     folderImage.setAttribute("alt", "Folder icon.");
     const folderCaption = document.createElement("figcaption");
-    folderCaption.innerText = folderName;
+    folderCaption.innerText = folderRef[0].name;
     folderFigure.append(folderImage, folderCaption);
     folderLink.append(folderFigure);
     folderDirectory.append(folderLink);
@@ -97,17 +104,18 @@ function clearDirectories() {
 
 function changeDirectory() {
     clearDirectories();
-    
+    for (const iFolders of folderRef) {
+
+    }
 }
 
-// Test file creation
+// TESTING PROTOCOL
 
 testButton = document.createElement("button");
 testButton.innerText = "Test";
 testFooter = document.querySelector("footer");
 testFooter.append(testButton);
-newFolder("testing-folder")
-newFolder("testing-folder-2")
+newFolder(folderRoot)
 function testTestFolder() {
     console.log(currentDirectory);
 }
