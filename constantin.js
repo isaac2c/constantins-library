@@ -49,7 +49,7 @@ function newFolder(folderName) {
     const folderLink = document.createElement("a");
     folderLink.setAttribute("href", "#");
     folderLink.setAttribute("id", folderName + "-link")
-    document.querySelector("#" + folderName + "-link").onclick = console.log(folderName); // FIX THIS!
+    folderLink.onclick = console.log(folderName); // FIX THIS!
     const folderFigure = document.createElement("figure");
     const folderImage = document.createElement("img");
     folderImage.className += " doc-icon";
