@@ -45,8 +45,7 @@ function newFolder(folderName) {
     const folderDirectory = document.querySelector("#folder-directory");
     const folderLink = document.createElement("a");
     folderLink.setAttribute("href", "#");
-    folderLink.setAttribute("id", folderName + "-link")
-    folderLink.onclick = console.log(folderName); // FIX THIS!
+    folderLink.setAttribute("onclick", "updateCurrentDirectory(folderName)")
     const folderFigure = document.createElement("figure");
     const folderImage = document.createElement("img");
     folderImage.className += " doc-icon";
@@ -88,4 +87,4 @@ testFooter.append(testButton);
 newFolder("testing-folder")
 newFolder("testing-folder-2")
 testTestFolder = console.log(currentDirectory);
-testButton.onclick = testTestFolder
+testButton.onclick = testTestFolder();
