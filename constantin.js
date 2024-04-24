@@ -45,7 +45,7 @@ function newFolder(folderName) {
     const folderDirectory = document.querySelector("#folder-directory");
     const folderLink = document.createElement("a");
     folderLink.setAttribute("href", "#");
-    folderLink.setAttribute("onclick", "updateCurrentDirectory(folderName)")
+    folderLink.setAttribute("onclick", updateCurrentDirectory(folderName))
     const folderFigure = document.createElement("figure");
     const folderImage = document.createElement("img");
     folderImage.className += " doc-icon";
