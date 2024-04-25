@@ -181,7 +181,8 @@ function changeDirectory(targetFolder) {
 // This section controls the effects of the user's interaction with the login form.
 
 loginForm = document.querySelector("#login-form");
-loginForm.addEventListener("submit", function(event) {
+loginForm.addEventListener("submit", nonSubmit);
+function nonSubmit(event) {
     event.preventdefault(event);
     if (loginForm[1].value == "admin@constantinslibrary.com") {
         if (loginForm[2].value == "password") {
@@ -192,6 +193,6 @@ loginForm.addEventListener("submit", function(event) {
     } else {
         alert("Incorrect credentials - check username and password.");
     }
-})
+}
 
 // TESTING PROTOCOL
