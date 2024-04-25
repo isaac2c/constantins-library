@@ -177,6 +177,21 @@ function changeDirectory(targetFolder) {
     updateFolderTree(targetFolder);
 }
 
-// TESTING PROTOCOL
+//LOGIN FORM
+// This section controls the effects of the user's interaction with the login form.
 
-changeDirectory(folderExampleRoot);
+loginForm = document.querySelector("#login-form");
+loginForm.addEventListener("submit", function(event) {
+    event.preventdefault();
+    if (loginForm[1].value == "admin@constantinslibrary.com") {
+        if (loginForm[2].value == "password") {
+            changeDirectory(folderExampleRoot);
+        } else {
+            alert("Incorrect credentials - check username and password.");
+        }
+    } else {
+        alert("Incorrect credentials - check username and password.");
+    }
+})
+
+// TESTING PROTOCOL
