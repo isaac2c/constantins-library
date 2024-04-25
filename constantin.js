@@ -110,7 +110,7 @@ function newFolder(folderRef) {
     const folderDirectory = document.querySelector("#folder-directory");
     const folderLink = document.createElement("a");
     folderLink.setAttribute("href", "#");
-    folderLink.onclick =  function () {
+    folderLink.onclick = function () {
         changeDirectory(folderRef);
     };
     const folderFigure = document.createElement("figure");
@@ -142,6 +142,7 @@ function clearDirectories() {
 
 function changeDirectory(targetFolder) {
     clearDirectories();
+    console.log(targetFolder);
     for (const iFolder of targetFolder[1]) {
         console.log(iFolder.ref);
         newFolder(iFolder.ref);
