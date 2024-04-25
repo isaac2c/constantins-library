@@ -149,9 +149,10 @@ function updateFolderTree(currentFolder) {
     nameArray.unshift(searchFolder[0].name + "\/");
     targetArray.unshift(searchFolder);
     for (const pathFolders of nameArray) {
-        folderTree.innerText += "<a id=\"folder-tree" + nameArray.indexOf(pathFolders) + "href=\"#\"><\/a>";
-        const subTree = document.querySelector("#folder-tree" + nameArray.indexOf(pathFolders));
-        subTree.onclick = function () {
+        const newTreeLayer = document.createElement("a");
+        newTreeLayer.setAttribute("href", "#");
+        newTreeLayer.innerText = pathFolders;
+        newTreeLayer.onclick = function () {
             changeDirectory(targetArray[nameArray.indexOf(pathFolders)]);
         };
     }
