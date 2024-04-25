@@ -124,6 +124,12 @@ a:active {
     text-decoration-line: underline;
 }
 
+#notable-quote {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
 #main-container {
     display: none;
 }
