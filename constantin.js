@@ -6,7 +6,7 @@ indirectEval = eval;
 
 ///*
 // DATA STRUCTURE - EXAMPLE
-// This data structure contains information about the contents of an example directory.
+// This data structure contains information about the contents of some example directories.
 
 
 folderExampleRoot = [
@@ -33,6 +33,7 @@ folderExampleFolder1 = [
     {name: "example-folder-1", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
+        {ref: "example-root", name: ".."},
     ],
     [
         //File directory contents:
@@ -43,6 +44,7 @@ folderExampleFolder2 = [
     {name: "example-folder-2", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
+        {ref: "example-root", name: ".."},
     ],
     [
         //File directory contents:
@@ -53,6 +55,7 @@ folderExampleFolder3 = [
     {name: "example-folder-3", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
+        {ref: "example-root", name: ".."},
     ],
     [
         //File directory contents:
@@ -63,6 +66,7 @@ folderExampleFolder4 = [
     {name: "example-folder-4", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
+        {ref: "example-root", name: ".."},
     ],
     [
         //File directory contents:
@@ -136,7 +140,6 @@ function clearDirectories() {
 function changeDirectory(targetFolder) {
     clearDirectories();
     for (const iFolder of targetFolder[1]) {
-        console.log(indirectEval(iFolder.ref));
         newFolder(indirectEval(iFolder.ref));
     }
     for (const iFile of targetFolder[2]) {
