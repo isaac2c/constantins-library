@@ -135,17 +135,21 @@ function clearDirectories() {
 
 function updateFolderTree(currentFolder) {
     const nameArray = [];
+    const targetArray = [];
     let searchFolder = currentFolder;
     function identifyParent(childFolder) {
         return childFolder.name === "..";
     }
     while (searchFolder[1].some(identifyParent)) {
         nameArray.unshift(" " + searchFolder[0].name + "\/");
+        targetArray.unshift(searchFolder);
         searchFolder = indirectEval(searchFolder[1].find(identifyParent).ref);
     }
     nameArray.unshift(searchFolder[0].name + "\/");
+    targetArray.unshift(searchFolder);
     for (const pathFolders of nameArray) {
         console.log(pathFolders);
+        console.log(targetArray);
     }
 
 }
