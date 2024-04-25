@@ -183,7 +183,7 @@ function changeDirectory(targetFolder) {
 loginForm = document.querySelector("#login-form");
 loginForm.addEventListener("submit", nonSubmit);
 function nonSubmit(event) {
-    event.preventdefault(event);
+    event.preventDefault(event);
     if (loginForm[1].value == "admin@constantinslibrary.com") {
         if (loginForm[2].value == "password") {
             changeDirectory(folderExampleRoot);
