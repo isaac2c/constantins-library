@@ -35,6 +35,46 @@ folderExampleRoot = [
         {name: "example-image.png", type: 4}
     ]
 ];
+folderExampleFolder1 = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "example-folder-1", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    [
+        // Folder directory contents:
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderExampleFolder2 = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "example-folder-2", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    [
+        // Folder directory contents:
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderExampleFolder3 = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "example-folder-3", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    [
+        // Folder directory contents:
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderExampleFolder4 = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "example-folder-4", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    [
+        // Folder directory contents:
+    ],
+    [
+        //File directory contents:
+    ]
+];
 
 // NEW FILE
 // This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
@@ -103,7 +143,7 @@ function clearDirectories() {
 function changeDirectory(targetFolder) {
     clearDirectories();
     for (const iFolder of targetFolder[1]) {
-        console.log(iFolder);
+        console.log(iFolder.ref);
         newFolder(iFolder.ref);
     }
     for (const iFile of targetFolder[2]) {
