@@ -134,15 +134,19 @@ function clearDirectories() {
 // This function updates the displayed folder hierarchy to assist with navigation.
 
 function updateFolderTree(currentFolder) {
+    const nameArray = [];
     let searchFolder = currentFolder;
     function identifyParent(childFolder) {
         return childFolder.name === "..";
     }
     while (searchFolder[1].some(identifyParent)) {
-        console.log(searchFolder[0].name);
+        nameArray.unshift(" " + searchFolder[0].name + "\/");
         searchFolder = indirectEval(searchFolder[1].find(identifyParent).ref);
     }
-    console.log(searchFolder[0].name);
+    nameArray.unshift(searchFolder[0].name + "\/");
+    for (const pathFolders of nameArray) {
+        console.log(pathFolders);
+    }
 
 }
 
