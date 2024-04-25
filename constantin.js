@@ -24,7 +24,7 @@ folderExampleRoot = [
         {ref: folderExampleFolder1, name: "example-folder-1"},
         {ref: folderExampleFolder2, name: "example-folder-2"},
         {ref: folderExampleFolder3, name: "example-folder-3"},
-        {ref: folderExampleFolder4, name: "example-folder-4"},
+        {ref: folderExampleFolder4, name: "example-folder-4"}
     ],
     [
         //File directory contents:
@@ -32,7 +32,7 @@ folderExampleRoot = [
         {name: "example-pdf.pdf", type: 1},
         {name: "example-text-document.txt", type: 2},
         {name: "example-spreadsheet.csv", type: 3},
-        {name: "example-image.png", type: 4},
+        {name: "example-image.png", type: 4}
     ]
 ];
 
@@ -103,7 +103,8 @@ function clearDirectories() {
 function changeDirectory(targetFolder) {
     clearDirectories();
     for (const iFolder of targetFolder[1]) {
-        newFolder(iFolder.ref)
+        console.log(iFolder.ref);
+        newFolder(iFolder.ref);
     }
     for (const iFile of targetFolder[2]) {
         const newPath =  targetFolder[0].path + iFile.name;
@@ -119,6 +120,6 @@ testFooter = document.querySelector("footer");
 testFooter.append(testButton);
 newFolder(folderExampleRoot)
 function testTest() {
-    console.log(currentDirectory);
+
 }
 testButton.onclick = testTest;
