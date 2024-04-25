@@ -1,8 +1,4 @@
-// Files
-
 indirectEval = eval;
-
-// Remember to escape forward slashes when passing fileLink as an argument.
 
 ///*
 // DATA STRUCTURE - EXAMPLE
@@ -15,9 +11,6 @@ folderExampleRoot = [
     [
         // Folder directory contents:
         {ref: "folderExampleFolder1", name: "example-folder-1"},
-        {ref: "folderExampleFolder2", name: "example-folder-2"},
-        {ref: "folderExampleFolder3", name: "example-folder-3"},
-        {ref: "folderExampleFolder4", name: "example-folder-4"}
     ],
     [
         //File directory contents:
@@ -34,6 +27,7 @@ folderExampleFolder1 = [
     [
         // Folder directory contents:
         {ref: "folderExampleRoot", name: ".."},
+        {ref: "folderExampleFolder2", name: "example-folder-2"}
     ],
     [
         //File directory contents:
@@ -44,7 +38,8 @@ folderExampleFolder2 = [
     {name: "example-folder-2", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
-        {ref: "folderExampleRoot", name: ".."},
+        {ref: "folderExampleFolder1", name: ".."},
+        {ref: "folderExampleFolder3", name: "example-folder-3"}
     ],
     [
         //File directory contents:
@@ -55,7 +50,8 @@ folderExampleFolder3 = [
     {name: "example-folder-3", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
-        {ref: "folderExampleRoot", name: ".."},
+        {ref: "folderExampleFolder2", name: ".."},
+        {ref: "folderExampleFolder4", name: "example-folder-4"}
     ],
     [
         //File directory contents:
@@ -66,7 +62,7 @@ folderExampleFolder4 = [
     {name: "example-folder-4", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
-        {ref: "folderExampleRoot", name: ".."},
+        {ref: "folderExampleFolder3", name: ".."}
     ],
     [
         //File directory contents:
@@ -134,6 +130,22 @@ function clearDirectories() {
     }
 }
 
+// UPDATE FOLDER TREE
+// This function updates the displayed folder hierarchy to assist with navigation.
+
+function updateFolderTree(currentFolder) {
+    let searchFolder = currentFolder;
+    function identifyParent(childFolder) {
+        return childFolder.name === "..";
+    }
+    while (searchFolder.find(identifyParent)) {
+        console.log(searchFolder);
+        searchFolder = indirectEval(searchFolder.find(identifyParent).ref).name;
+    }
+    console.log(searchFolder);
+
+}
+
 // CHANGE DIRECTORY
 // This function combines the above functions to change what the user sees when they select a new folder.
 
@@ -150,12 +162,5 @@ function changeDirectory(targetFolder) {
 
 // TESTING PROTOCOL
 
-testButton = document.createElement("button");
-testButton.innerText = "Test";
-testFooter = document.querySelector("footer");
-testFooter.append(testButton);
-changeDirectory(folderExampleRoot)
-function testTest() {
-
-}
-testButton.onclick = testTest;
+changeDirectory(folderExampleRoot);
+updateFolderTree(folderExampleFolder4);
