@@ -125,7 +125,7 @@ a:active {
 }
 
 #main-container {
-    display: hidden;
+    display: none;
 }
 
 /* FOOTER */
