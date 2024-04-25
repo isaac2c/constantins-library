@@ -1,10 +1,5 @@
-indirectEval = eval;
-let folderTreeSnapshot = document.querySelector("#folder-tree").innerHTML;
-
-///*
-// DATA STRUCTURE - EXAMPLE
-// This data structure contains information about the contents of some example directories.
-
+// DATA STRUCTURES
+// These data structure contains information about the contents of the folders displayed on the Constantin's Library File Manager.
 
 folderExampleRoot = [
     // Folder details (Remember to escape forward slashes in path):
@@ -69,6 +64,12 @@ folderExampleFolder4 = [
         //File directory contents:
     ]
 ];
+
+// EARLY DECLARATIONS
+// These are variables used elsewhere that must be declared early.
+
+indirectEval = eval;
+let folderTreeSnapshot = document.querySelector("#folder-tree").innerHTML;
 
 // NEW FILE
 // This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
@@ -185,6 +186,7 @@ loginForm.addEventListener("submit", nonSubmit);
 function nonSubmit(event) {
     event.preventDefault(event);
     if (loginForm[1].value == "admin@constantinslibrary.com") {
+        // Change password.
         if (loginForm[2].value == "password") {
             changeDirectory(folderExampleRoot);
             document.querySelector("#notable-quote").style.display = "none";
@@ -202,6 +204,7 @@ function nonSubmit(event) {
                 logoutButton.remove();
                 loginForm.style.display = "block";
                 document.querySelector("#main-container").style.display = "none";
+                // Change the details of this quotation.
                 document.querySelector("#notable-quote-text").innerText = "Another apt and significant quotation.  Surely there is little more apt than this."
                 document.querySelector("#notable-quote-citation").innerHTML = "-Another notable fellow, <cite>A second significant work<\/cite>"
                 document.querySelector("#notable-quote").style.display = "block"
@@ -214,5 +217,3 @@ function nonSubmit(event) {
         alert("Incorrect credentials - check username and password.");
     }
 }
-
-// TESTING PROTOCOL
