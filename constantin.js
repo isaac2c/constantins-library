@@ -149,7 +149,7 @@ function updateFolderTree(currentFolder) {
     targetArray.unshift(searchFolder);
     for (const pathFolders of nameArray) {
         console.log(pathFolders);
-        console.log(targetArray);
+        console.log(targetArray[nameArray.indexOf(pathFolders)]);
     }
 
 }
