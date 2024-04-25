@@ -188,14 +188,15 @@ function nonSubmit(event) {
         if (loginForm[2].value == "password") {
             changeDirectory(folderExampleRoot);
             document.querySelector("#main-container").style.display = "block";
-            loginForm.style.display = "hidden";
+            loginForm.style.display = "none";
             logoutButton = document.createElement("img");
             logoutButton.setAttribute("src", "\/uploaded-resources\/logout-symbol-transparent.png");
             logoutButton.setAttribute("alt", "Logout.");
+            logoutButton.setAttribute("class", "login-symbol")
             logoutButton.onclick = function() {
                 logoutButton.remove();
                 loginForm.style.display = "block";
-                document.querySelector("#main-container").style.display = "hidden";
+                document.querySelector("#main-container").style.display = "none";
             };
             document.querySelector("header").appendChild(logoutButton);
         } else {
