@@ -156,7 +156,7 @@ function updateFolderTree(currentFolder) {
             changeDirectory(targetArray[nameArray.indexOf(pathFolders)]);
         };
         newTreeLayer.innerText = pathFolders;
-        newTreeSpan.innerText = " "
+        newTreeSpan.innerText = "&nbsp"
         folderTree.appendChild(newTreeLayer, newTreeSpan);
     }
 
