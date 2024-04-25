@@ -172,6 +172,7 @@ function changeDirectory(targetFolder) {
         const newPath =  targetFolder[0].path + iFile.name;
         newFile(iFile.name, iFile.type, newPath);
     }
+    updateFolderTree(targetFolder);
 }
 
 // TESTING PROTOCOL
