@@ -1,7 +1,6 @@
 // Files
 
-let currentDirectory = ""
-
+indirectEval = eval;
 
 // Remember to escape forward slashes when passing fileLink as an argument.
 
@@ -9,22 +8,16 @@ let currentDirectory = ""
 // DATA STRUCTURE - EXAMPLE
 // This data structure contains information about the contents of an example directory.
 
-//Declare all folders:
-let folderExampleRoot = [];
-let folderExampleFolder1 = [];
-let folderExampleFolder2 = [];
-let folderExampleFolder3 = [];
-let folderExampleFolder4 = [];
 
 folderExampleRoot = [
     // Folder details (Remember to escape forward slashes in path):
     {name: "example-root", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
-        {ref: folderExampleFolder1, name: "example-folder-1"},
-        {ref: folderExampleFolder2, name: "example-folder-2"},
-        {ref: folderExampleFolder3, name: "example-folder-3"},
-        {ref: folderExampleFolder4, name: "example-folder-4"}
+        {ref: "folderExampleFolder1", name: "example-folder-1"},
+        {ref: "folderExampleFolder2", name: "example-folder-2"},
+        {ref: "folderExampleFolder3", name: "example-folder-3"},
+        {ref: "folderExampleFolder4", name: "example-folder-4"}
     ],
     [
         //File directory contents:
@@ -142,10 +135,9 @@ function clearDirectories() {
 
 function changeDirectory(targetFolder) {
     clearDirectories();
-    console.log(targetFolder);
     for (const iFolder of targetFolder[1]) {
-        console.log(iFolder.ref);
-        newFolder(iFolder.ref);
+        console.log(indirectEval(iFolder.ref));
+        newFolder(indirectEval(iFolder.ref));
     }
     for (const iFile of targetFolder[2]) {
         const newPath =  targetFolder[0].path + iFile.name;
