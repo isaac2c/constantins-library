@@ -1,5 +1,6 @@
 indirectEval = eval;
 let folderTreeSnapshot = document.querySelector("#folder-tree").innerHTML;
+
 ///*
 // DATA STRUCTURE - EXAMPLE
 // This data structure contains information about the contents of some example directories.
@@ -179,4 +180,3 @@ function changeDirectory(targetFolder) {
 // TESTING PROTOCOL
 
 changeDirectory(folderExampleRoot);
-updateFolderTree(folderExampleFolder4);
