@@ -172,7 +172,7 @@ function changeDirectory(targetFolder) {
         const newPath =  targetFolder[0].path + iFile.name;
         newFile(iFile.name, iFile.type, newPath);
     }
-    document.querySelector(#"#folder-tree").innerHTML = folderTreeSnapshot;
+    document.querySelector("#folder-tree").innerHTML = folderTreeSnapshot;
     updateFolderTree(targetFolder);
 }
 
