@@ -141,7 +141,7 @@ function updateFolderTree(currentFolder) {
     console.log(searchFolder[1].some(identifyParent))
     while (searchFolder[1].some(identifyParent)) {
         console.log(searchFolder[0].name);
-        searchFolder = indirectEval(searchFolder.find(identifyParent).ref).name;
+        searchFolder = indirectEval(searchFolder[1].find(identifyParent).ref).name;
     }
     console.log(searchFolder[0].name);
 
