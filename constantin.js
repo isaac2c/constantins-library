@@ -103,7 +103,7 @@ function clearDirectories() {
 function changeDirectory(targetFolder) {
     clearDirectories();
     for (const iFolder of targetFolder[1]) {
-        console.log(iFolder.ref);
+        console.log(iFolder);
         newFolder(iFolder.ref);
     }
     for (const iFile of targetFolder[2]) {
