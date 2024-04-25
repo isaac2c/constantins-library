@@ -193,6 +193,7 @@ function nonSubmit(event) {
             logoutButton.setAttribute("src", "\/uploaded-resources\/logout-symbol-transparent.png");
             logoutButton.setAttribute("alt", "Logout.");
             logoutButton.setAttribute("class", "login-symbol")
+            logoutButton.style.margin = "2em";
             logoutButton.onclick = function() {
                 logoutButton.remove();
                 loginForm.style.display = "block";
