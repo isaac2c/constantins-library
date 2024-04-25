@@ -33,7 +33,7 @@ folderExampleFolder1 = [
     {name: "example-folder-1", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
-        {ref: "example-root", name: ".."},
+        {ref: "exampleRoot", name: ".."},
     ],
     [
         //File directory contents:
@@ -44,7 +44,7 @@ folderExampleFolder2 = [
     {name: "example-folder-2", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
-        {ref: "example-root", name: ".."},
+        {ref: "exampleRoot", name: ".."},
     ],
     [
         //File directory contents:
@@ -55,7 +55,7 @@ folderExampleFolder3 = [
     {name: "example-folder-3", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
-        {ref: "example-root", name: ".."},
+        {ref: "exampleRoot", name: ".."},
     ],
     [
         //File directory contents:
@@ -66,7 +66,7 @@ folderExampleFolder4 = [
     {name: "example-folder-4", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
         // Folder directory contents:
-        {ref: "example-root", name: ".."},
+        {ref: "exampleRoot", name: ".."},
     ],
     [
         //File directory contents:
