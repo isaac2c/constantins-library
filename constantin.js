@@ -150,14 +150,12 @@ function updateFolderTree(currentFolder) {
     targetArray.unshift(searchFolder);
     for (const pathFolders of nameArray) {
         const newTreeLayer = document.createElement("a");
-        const newTreeSpan = document.createElement("span");
         newTreeLayer.setAttribute("href", "#");
         newTreeLayer.onclick = function () {
             changeDirectory(targetArray[nameArray.indexOf(pathFolders)]);
         };
         newTreeLayer.innerText = pathFolders;
-        newTreeSpan.innerText = "/&nbsp";
-        folderTree.appendChild(newTreeLayer, newTreeSpan);
+        folderTree.appendChild(newTreeLayer);
     }
 
 }

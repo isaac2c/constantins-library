@@ -111,6 +111,7 @@ a:any-link {
 
 p a:any-link {
     text-decoration-line: underline;
+    margin-right: 0.5em;
 }
 
 a:hover {
