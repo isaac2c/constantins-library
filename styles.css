@@ -125,9 +125,17 @@ a:active {
 }
 
 #notable-quote {
-    width: 80%;
+    width: 50%;
     margin: 5em auto;
     text-align: center;
+}
+
+#notable-quote blockquote {
+    width: 100%;
+}
+
+#notable-quote figcaption {
+    width: 100%;
 }
 
 #main-container {
