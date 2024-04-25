@@ -142,7 +142,7 @@ function updateFolderTree(currentFolder) {
         return childFolder.name === "..";
     }
     while (searchFolder[1].some(identifyParent)) {
-        nameArray.unshift(" " + searchFolder[0].name + "\/");
+        nameArray.unshift(searchFolder[0].name + "\/");
         targetArray.unshift(searchFolder);
         searchFolder = indirectEval(searchFolder[1].find(identifyParent).ref);
     }
@@ -150,12 +150,14 @@ function updateFolderTree(currentFolder) {
     targetArray.unshift(searchFolder);
     for (const pathFolders of nameArray) {
         const newTreeLayer = document.createElement("a");
+        const newTreeSpan = document.createElement("span");
         newTreeLayer.setAttribute("href", "#");
         newTreeLayer.onclick = function () {
             changeDirectory(targetArray[nameArray.indexOf(pathFolders)]);
         };
         newTreeLayer.innerText = pathFolders;
-        folderTree.appendChild(newTreeLayer);
+        newTreeSpan.innerText = " "
+        folderTree.appendChild(newTreeLayer, newTreeSpan);
     }
 
 }
