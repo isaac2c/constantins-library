@@ -196,6 +196,7 @@ function nonSubmit(event) {
             logoutButton.setAttribute("alt", "Logout.");
             logoutButton.setAttribute("class", "login-symbol")
             logoutButton.style.margin = "1em";
+            logoutButton.style.cursor = "pointer";
             logoutButton.onclick = function() {
                 logoutButton.remove();
                 loginForm.style.display = "block";
