@@ -151,10 +151,11 @@ function updateFolderTree(currentFolder) {
     for (const pathFolders of nameArray) {
         const newTreeLayer = document.createElement("a");
         newTreeLayer.setAttribute("href", "#");
-        newTreeLayer.innerText = pathFolders;
         newTreeLayer.onclick = function () {
             changeDirectory(targetArray[nameArray.indexOf(pathFolders)]);
         };
+        newTreeLayer.innerText = pathFolders;
+        folderTree.appendChild(newTreeLayer);
     }
 
 }
