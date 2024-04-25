@@ -10,11 +10,11 @@ let currentDirectory = ""
 // This data structure contains information about the contents of an example directory.
 
 //Declare all folders:
-const folderExampleRoot = [];
-const folderExampleFolder1 = [];
-const folderExampleFolder2 = [];
-const folderExampleFolder3 = [];
-const folderExampleFolder4 = [];
+let folderExampleRoot = [];
+let folderExampleFolder1 = [];
+let folderExampleFolder2 = [];
+let folderExampleFolder3 = [];
+let folderExampleFolder4 = [];
 
 folderExampleRoot = [
     // Folder details (Remember to escape forward slashes in path):
