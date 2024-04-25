@@ -187,6 +187,7 @@ function nonSubmit(event) {
     if (loginForm[1].value == "admin@constantinslibrary.com") {
         if (loginForm[2].value == "password") {
             changeDirectory(folderExampleRoot);
+            document.querySelector("#notable-quote").style.display = "none";
             document.querySelector("#main-container").style.display = "block";
             loginForm.style.display = "none";
             loginForm[1].value = "";
@@ -201,6 +202,9 @@ function nonSubmit(event) {
                 logoutButton.remove();
                 loginForm.style.display = "block";
                 document.querySelector("#main-container").style.display = "none";
+                document.querySelector("#notable-quote-text").innerText = "Another apt and significant quotation.  Surely there is little more apt than this."
+                document.querySelector("#notable-quote-citation").innerHTML = "-Another notable fellow, <cite>A second significant work<\/cite>"
+                document.querySelector("#notable-quote").style.display = "block"
             };
             document.querySelector("header").appendChild(logoutButton);
         } else {

@@ -125,6 +125,7 @@ a:active {
 }
 
 #notable-quote {
+    width: 60%;
     margin: 5em auto;
     text-align: center;
 }
