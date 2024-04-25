@@ -1,5 +1,5 @@
 indirectEval = eval;
-
+let folderTreeSnapshot = document.querySelector("#folder-tree");
 ///*
 // DATA STRUCTURE - EXAMPLE
 // This data structure contains information about the contents of some example directories.
@@ -172,6 +172,7 @@ function changeDirectory(targetFolder) {
         const newPath =  targetFolder[0].path + iFile.name;
         newFile(iFile.name, iFile.type, newPath);
     }
+    document.querySelector(#"#folder-tree").innerHTML = folderTreeSnapshot;
     updateFolderTree(targetFolder);
 }
 
