@@ -124,6 +124,10 @@ a:active {
     text-decoration-line: underline;
 }
 
+#main-container {
+    display: hidden;
+}
+
 /* FOOTER */
 
 footer {
