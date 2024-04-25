@@ -9,7 +9,14 @@ let currentDirectory = ""
 // DATA STRUCTURE - EXAMPLE
 // This data structure contains information about the contents of an example directory.
 
-const folderExampleRoot = [
+//Declare all folders:
+const folderExampleRoot = [];
+const folderExampleFolder1 = [];
+const folderExampleFolder2 = [];
+const folderExampleFolder3 = [];
+const folderExampleFolder4 = [];
+
+folderExampleRoot = [
     // Folder details (Remember to escape forward slashes in path):
     {name: "example-root", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
     [
@@ -28,12 +35,6 @@ const folderExampleRoot = [
         {name: "example-image.png", type: 4},
     ]
 ];
-const folderExampleFolder1 = [];
-const folderExampleFolder2 = [];
-const folderExampleFolder3 = [];
-const folderExampleFolder4 = [];
-
-//*/
 
 // NEW FILE
 // This function makes a selected file stored on the server available for download from the Constantin's Library File Manager.
