@@ -196,7 +196,8 @@ function nonSubmit(event) {
                 logoutButton.remove();
                 loginForm.style.display = "block";
                 document.querySelector("#main-container").style.display = "hidden";
-            }
+            };
+            document.querySelector("header").appendChild(logoutButton);
         } else {
             alert("Incorrect credentials - check username and password.");
         }
