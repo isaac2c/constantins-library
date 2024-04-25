@@ -136,6 +136,7 @@ function clearDirectories() {
 function updateFolderTree(currentFolder) {
     const nameArray = [];
     const targetArray = [];
+    const folderTree = document.querySelector("#folder-tree");
     let searchFolder = currentFolder;
     function identifyParent(childFolder) {
         return childFolder.name === "..";
@@ -148,8 +149,11 @@ function updateFolderTree(currentFolder) {
     nameArray.unshift(searchFolder[0].name + "\/");
     targetArray.unshift(searchFolder);
     for (const pathFolders of nameArray) {
-        console.log(pathFolders);
-        console.log(targetArray[nameArray.indexOf(pathFolders)]);
+        folderTree.innerText += "<a id=\"folder-tree" + nameArray.indexOf(pathFolders) + "href=\"#\"><\/a>";
+        const subTree = document.querySelector("#folder-tree" + nameArray.indexOf(pathFolders));
+        subTree.onclick = function () {
+            changeDirectory(targetArray[nameArray.indexOf(pathFolders)]);
+        };
     }
 
 }
