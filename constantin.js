@@ -103,7 +103,7 @@ function newFile(fileName, fileType, fileLink) {
 // NEW FOLDER
 // This function makes a selected folder stored on the server visible within the Constantin's Library File Manager.
 
-function newFolder(folderRef) {
+function newFolder(folderRef, folderName) {
     const folderDirectory = document.querySelector("#folder-directory");
     const folderLink = document.createElement("a");
     folderLink.setAttribute("href", "#");
@@ -116,7 +116,7 @@ function newFolder(folderRef) {
     folderImage.setAttribute("src", "/uploaded-resources/folder-transparent.png");
     folderImage.setAttribute("alt", "Folder icon.");
     const folderCaption = document.createElement("figcaption");
-    folderCaption.innerText = folderRef[0].name;
+    folderCaption.innerText = folderName;
     folderFigure.append(folderImage, folderCaption);
     folderLink.append(folderFigure);
     folderDirectory.append(folderLink);
@@ -140,7 +140,7 @@ function clearDirectories() {
 function changeDirectory(targetFolder) {
     clearDirectories();
     for (const iFolder of targetFolder[1]) {
-        newFolder(indirectEval(iFolder.ref));
+        newFolder(indirectEval(iFolder.ref), iFolder.name);
     }
     for (const iFile of targetFolder[2]) {
         const newPath =  targetFolder[0].path + iFile.name;
@@ -154,7 +154,7 @@ testButton = document.createElement("button");
 testButton.innerText = "Test";
 testFooter = document.querySelector("footer");
 testFooter.append(testButton);
-newFolder(folderExampleRoot)
+changeDirectory(folderExampleRoot)
 function testTest() {
 
 }
