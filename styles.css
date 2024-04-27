@@ -36,7 +36,7 @@ header {
     color: rgb(225, 225, 225);
     border-bottom: 1px solid rgb(255, 157, 0);
     box-shadow: 0 0 1.5em rgb(255, 200, 145);
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
