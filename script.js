@@ -1,5 +1,5 @@
 // DATA STRUCTURES
-// These data structure contains information about the contents of the folders displayed on the Constantin's Library File Manager.
+// These data structures contain information about the contents of the folders displayed on the Constantin's Library File Manager.
 
 folderExampleRoot = [
     // Folder details (Remember to escape forward slashes in path):
