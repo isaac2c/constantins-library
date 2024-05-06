@@ -186,8 +186,7 @@ loginForm.addEventListener("submit", nonSubmit);
 function nonSubmit(event) {
     event.preventDefault(event);
     if (loginForm[1].value == "admin@constantinslibrary.com") {
-        // Change password.
-        if (loginForm[2].value == "password") {
+        if (loginForm[2].value == "forward") {
             changeDirectory(folderExampleRoot);
             document.querySelector("#notable-quote").style.display = "none";
             document.querySelector("#main-container").style.display = "block";
