@@ -130,6 +130,10 @@ a:active {
     text-align: center;
 }
 
+#notable-quote-citation {
+    text-align: right;
+}
+
 #main-container {
     display: none;
 }
