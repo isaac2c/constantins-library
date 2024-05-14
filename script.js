@@ -43,6 +43,7 @@ folderVol1 = [
     ],
     [
         //File directory contents:
+        {name: "1_passwords.txt", type: 2}
     ]
 ];
 folderVol1Observation = [
@@ -54,6 +55,10 @@ folderVol1Observation = [
     ],
     [
         //File directory contents:
+        {name: "1_1_jacob.pdf", type: 1},
+        {name: "1_2_stephen.pdf", type: 1},
+        {name: "1_3_abigail.pdf", type: 1},
+        {name: "1_4_jacob.pdf", type: 1}
     ]
 ];
 folderVol1Recollection = [
@@ -65,6 +70,7 @@ folderVol1Recollection = [
     ],
     [
         //File directory contents:
+        {name: "1_5_a_beginning_of_sorts.pdf", type: 1}
     ]
 ];
 folderVol2 = [
@@ -78,6 +84,7 @@ folderVol2 = [
     ],
     [
         //File directory contents:
+        {name: "2_passwords.txt", type: 2}
     ]
 ];
 folderVol2Observation = [
@@ -89,6 +96,8 @@ folderVol2Observation = [
     ],
     [
         //File directory contents:
+        {name: "2_1_stephen.pdf", type: 1},
+        {name: "2_2_abigail.pdf", type: 1}
     ]
 ];
 folderVol2Recollection = [
@@ -100,6 +109,8 @@ folderVol2Recollection = [
     ],
     [
         //File directory contents:
+        {name: "2_3_on_keeping_silent.pdf", type: 1},
+        {name: "2_4_the_colour_of_sound.mp3", type: 0}
     ]
 ];
 folderVol3 = [
@@ -123,6 +134,7 @@ folderVol3Recollection = [
     ],
     [
         //File directory contents:
+        {name: "2_4_you_know_me.mp3", type: 0}
     ]
 ];
 folderVisions = [
@@ -134,6 +146,12 @@ folderVisions = [
     ],
     [
         //File directory contents:
+        {name: "lights_1.png", type: 4},
+        {name: "lights_2.png", type: 4},
+        {name: "lights_3.png", type: 4},
+        {name: "lights_4.png", type: 4},
+        {name: "lights_5.png", type: 4},
+        {name: "lights_6.png", type: 4},
     ]
 ];
 
