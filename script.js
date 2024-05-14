@@ -204,8 +204,8 @@ function nonSubmit(event) {
                 loginForm.style.display = "block";
                 document.querySelector("#main-container").style.display = "none";
                 // Change the details of this quotation.
-                document.querySelector("#notable-quote-text").innerText = "Another apt and significant quotation.  Surely there is little more apt than this."
-                document.querySelector("#notable-quote-citation").innerHTML = "-Another notable fellow, <cite>A second significant work<\/cite>"
+                document.querySelector("#notable-quote-text").innerText = "The art of the observer is to bring hidden things to light."
+                document.querySelector("#notable-quote-citation").innerHTML = "-Søren Kierkegaard, <cite>Repetition<\/cite>, p. 9"
                 document.querySelector("#notable-quote").style.display = "block"
             };
             document.querySelector("header").appendChild(logoutButton);
