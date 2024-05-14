@@ -1,12 +1,13 @@
 // DATA STRUCTURES
 // These data structures contain information about the contents of the folders displayed on the Constantin's Library File Manager.
 
-folderExampleRoot = [
+folderRoot = [
     // Folder details (Remember to escape forward slashes in path):
-    {name: "example-root", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    {name: "root", path: "\/uploaded-resources\/root\/"},
     [
         // Folder directory contents:
-        {ref: "folderExampleFolder1", name: "example-folder-1"},
+        {ref: "folderFragments", name: "fragments"},
+        {ref: "folderVisions", name: "visions"}
     ],
     [
         //File directory contents:
@@ -17,48 +18,119 @@ folderExampleRoot = [
         {name: "example-image.png", type: 4}
     ]
 ];
-folderExampleFolder1 = [
+folderFragments = [
     // Folder details (Remember to escape forward slashes in path):
-    {name: "example-folder-1", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    {name: "fragments", path: "\/uploaded-resources\/root\/fragments\/"},
     [
         // Folder directory contents:
-        {ref: "folderExampleRoot", name: ".."},
-        {ref: "folderExampleFolder2", name: "example-folder-2"}
+        {ref: "folderRoot", name: ".."},
+        {ref: "folderVol1", name: "vol_1"},
+        {ref: "folderVol2", name: "vol_2"},
+        {ref: "folderVol3", name: "vol_3"}
     ],
     [
         //File directory contents:
     ]
 ];
-folderExampleFolder2 = [
+folderVol1 = [
     // Folder details (Remember to escape forward slashes in path):
-    {name: "example-folder-2", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    {name: "vol_1", path: "\/uploaded-resources\/root\/fragments\/vol_1\/"},
     [
         // Folder directory contents:
-        {ref: "folderExampleFolder1", name: ".."},
-        {ref: "folderExampleFolder3", name: "example-folder-3"}
+        {ref: "folderFragments", name: ".."},
+        {ref: "folderVol1Observation", name: "vol_1_observation"},
+        {ref: "folderVol1Recollection", name: "vol_1_recollection"}
     ],
     [
         //File directory contents:
     ]
 ];
-folderExampleFolder3 = [
+folderVol1Observation = [
     // Folder details (Remember to escape forward slashes in path):
-    {name: "example-folder-3", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    {name: "vol_1_observation", path: "\/uploaded-resources\/root\/fragments\/vol_1\/vol_1_observation\/"},
     [
         // Folder directory contents:
-        {ref: "folderExampleFolder2", name: ".."},
-        {ref: "folderExampleFolder4", name: "example-folder-4"}
+        {ref: "folderVol1", name: ".."},
     ],
     [
         //File directory contents:
     ]
 ];
-folderExampleFolder4 = [
+folderVol1Recollection = [
     // Folder details (Remember to escape forward slashes in path):
-    {name: "example-folder-4", path: "\/uploaded-resources\/downloadable-files\/example-root\/"},
+    {name: "vol_1_recollection", path: "\/uploaded-resources\/root\/fragments\/vol_1\/vol_1_recollection\/"},
     [
         // Folder directory contents:
-        {ref: "folderExampleFolder3", name: ".."}
+        {ref: "folderVol1", name: ".."},
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderVol2 = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "vol_2", path: "\/uploaded-resources\/root\/fragments\/vol_2\/"},
+    [
+        // Folder directory contents:
+        {ref: "folderFragments", name: ".."},
+        {ref: "folderVol2Observation", name: "vol_2_observation"},
+        {ref: "folderVol2Recollection", name: "vol_2_recollection"}
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderVol2Observation = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "vol_2_observation", path: "\/uploaded-resources\/root\/fragments\/vol_2\/vol_2_observation\/"},
+    [
+        // Folder directory contents:
+        {ref: "folderVol2", name: ".."},
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderVol2Recollection = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "vol_2_recollection", path: "\/uploaded-resources\/root\/fragments\/vol_2\/vol_2_recollection\/"},
+    [
+        // Folder directory contents:
+        {ref: "folderVol2", name: ".."},
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderVol3 = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "vol_3", path: "\/uploaded-resources\/root\/fragments\/vol_3\/"},
+    [
+        // Folder directory contents:
+        {ref: "folderFragments", name: ".."},
+        {ref: "folderVol3Recollection", name: "vol_3_recollection"}
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderVol3Recollection = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "vol_3_recollection", path: "\/uploaded-resources\/root\/fragments\/vol_3\/vol_3_recollection\/"},
+    [
+        // Folder directory contents:
+        {ref: "folderVol3", name: ".."},
+    ],
+    [
+        //File directory contents:
+    ]
+];
+folderVisions = [
+    // Folder details (Remember to escape forward slashes in path):
+    {name: "visions", path: "\/uploaded-resources\/root\/visions\/"},
+    [
+        // Folder directory contents:
+        {ref: "folderRoot", name: ".."}
     ],
     [
         //File directory contents:
@@ -187,7 +259,7 @@ function nonSubmit(event) {
     event.preventDefault(event);
     if (loginForm[1].value == "admin@constantinslibrary.com") {
         if (loginForm[2].value == "forward") {
-            changeDirectory(folderExampleRoot);
+            changeDirectory(folderRoot);
             document.querySelector("#notable-quote").style.display = "none";
             document.querySelector("#main-container").style.display = "block";
             loginForm.style.display = "none";
