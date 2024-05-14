@@ -11,11 +11,6 @@ folderRoot = [
     ],
     [
         //File directory contents:
-        {name: "example-audio-file.mp3", type: 0},
-        {name: "example-pdf.pdf", type: 1},
-        {name: "example-text-document.txt", type: 2},
-        {name: "example-spreadsheet.csv", type: 3},
-        {name: "example-image.png", type: 4}
     ]
 ];
 folderFragments = [
