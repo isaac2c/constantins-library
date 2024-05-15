@@ -105,7 +105,7 @@ folderVol2Recollection = [
     [
         //File directory contents:
         {name: "2_3_on_keeping_silent.pdf", type: 1},
-        {name: "2_4_the_colour_of_sound.mp3", type: 0}
+        {name: "2_4_on_seeing_sound.mp3", type: 0}
     ]
 ];
 folderVol3 = [
@@ -129,7 +129,7 @@ folderVol3Recollection = [
     ],
     [
         //File directory contents:
-        {name: "2_4_you_know_me.mp3", type: 0}
+        {name: "3_1_a_dedication.mp3", type: 0}
     ]
 ];
 folderVisions = [
